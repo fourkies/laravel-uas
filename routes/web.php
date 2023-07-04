@@ -25,6 +25,7 @@ Route::get('/auth/redirect', [authController::class, "redirect"])->middleware
 ('guest'); 
 Route::get('/auth/callback', [authController::class, "callback"])->middleware
 ('guest');
+Route::get('/auth/logout',[authController::class,"logout"]);
 
 Route::get('/dashboard',function (){
     return 'Selamat datang '.Auth::user()->name.' di halaman Dashboard';

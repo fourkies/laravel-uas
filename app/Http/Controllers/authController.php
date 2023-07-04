@@ -43,4 +43,9 @@ class authController extends Controller
             tidak diizikan untuk menggunakan halaman Admin');
         }
     }
+    public function logout() 
+    {
+        Auth::logout();
+        return redirect()->to('auth');
+    }
 }
