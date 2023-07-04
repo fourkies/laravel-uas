@@ -19,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/auth',[authController::class, "index"]);
 Route::get('/auth/redirect', [authController::class, "redirect"]); 
-    
-
 Route::get('/auth/callback', [authController::class, "callback"]);
