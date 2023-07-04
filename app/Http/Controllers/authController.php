@@ -20,12 +20,17 @@ class authController extends Controller
         $email = $user->email;
         $name = $user->name;
 
-        $user = User::updateOrCreate(
+
+        $cek = User::where('email', $email)->count();
+        if ($cek > 0) {
+            $user = User::updateOrCreate(
             ['email' => $email],
             [
                 'name' => $name,
                 'google_id' => $id
             ]
-        );
+            
+            );
+        }
     }
 }
