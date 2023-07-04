@@ -24,5 +24,9 @@ Route::get('/auth/redirect', function () {
 
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('google')->user();
-    return '<h1>MANTAP</h1>';
+    $id = $user->id;
+    $email = $user->email;
+    $name = $user->name;
+
+    return "$id - $email - $name";
 });
