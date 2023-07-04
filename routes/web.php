@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/auth/redirect', function() {
+Route::get('/auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
