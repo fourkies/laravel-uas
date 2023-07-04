@@ -19,11 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/auth',[authController::class, "index"]);
+Route::get('/auth',[authController::class, "index"])->name('login');
 Route::get('/auth/redirect', [authController::class, "redirect"]); 
 Route::get('/auth/callback', [authController::class, "callback"]);
 
 Route::get('/dashboard',function (){
-    return 'Selamat datang di halaman Dashboard';
-
-});
+    return 'Selamat datang '.Auth::user()->name.' di halaman Dashboard';
+})->middleware('auth');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
 class authController extends Controller
@@ -35,6 +36,7 @@ class authController extends Controller
             ]
 
             );
+            Auth::login($user);
             return redirect()->to('dashboard');
         } else {
             return redirect()->to('auth')->with('error','Account yang anda masukkan
