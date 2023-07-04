@@ -35,9 +35,10 @@ class authController extends Controller
             ]
 
             );
-            return '<h1>Selamat anda sudah masuk</h1>';
+            return redirect()->to('dashboard');
         } else {
-            return '<h1>Email tidak terdaftar</h1>';
+            return redirect()->to('auth')->with('error','Account yang anda masukkan
+            tidak diizikan untuk menggunakan halaman Admin');
         }
     }
 }

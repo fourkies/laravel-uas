@@ -22,3 +22,8 @@ Route::get('/', function () {
 Route::get('/auth',[authController::class, "index"]);
 Route::get('/auth/redirect', [authController::class, "redirect"]); 
 Route::get('/auth/callback', [authController::class, "callback"]);
+
+Route::get('/dashboard',function (){
+    return 'Selamat datang di halaman Dashboard';
+
+});
