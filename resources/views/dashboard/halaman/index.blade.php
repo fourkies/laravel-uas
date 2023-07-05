@@ -2,7 +2,24 @@
 
 @section('konten')
     <p class="card-title">Halaman</p>
-    <div class="pb"><a href="" class="btn btn-primary">+ Tambah Halaman</a></div>
+    <div class="pb"><a href="{{ route('halaman.create') }}" class="btn btn-primary">+ Tambah Halaman</a>
+    </div>
     <div class="table-responsive">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th class="col-1">No</th>
+                    <th>Judul</th>
+                    <th class="col-2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 @endsection
