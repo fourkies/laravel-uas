@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Majestic Admin</title>
+    <title>Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin') }}/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ asset('admin') }}/vendors/base/vendor.bundle.base.css">
@@ -17,31 +17,6 @@
     <link rel="stylesheet" href="{{ asset('admin') }}/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('admin') }}/images/favicon.png" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
-    <!-- tokenfield -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.css"
-        integrity="sha512-wcf2ifw+8xI4FktrSorGwO7lgRzGx1ld97ySj1pFADZzFdcXTIgQhHMTo7tQIADeYdRRnAjUnF00Q5WTNmL3+A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        .tokenfield .token {
-            margin: -1px 1px 1px 1px;
-            height: 25px;
-            line-height: 22px;
-            color: #fff;
-            background-color: #0b5ed7
-        }
-
-        .tokenfield .token a {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -65,7 +40,8 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             id="profileDropdown">
-                            <img src="{{ asset('admin') }}/images/faces/{{ Auth::user()->avatar }}" alt="profile" />
+                            <img src="{{ asset('admin') }}/images/faces/face15.jpg{{ Auth::user()->avatar }}"
+                                alt="profile" />
                             <span class="nav-profile-name">{{ Auth::user()->name }}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
@@ -89,39 +65,9 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('halaman.index') }}">
+                        <a class="nav-link" href="documentation/documentation.html">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Halaman</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('experience.index') }}">
-                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Experience</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('education.index') }}">
-                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Education</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('skill.index') }}">
-                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Skill</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile.index') }}">
-                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Profile</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pengaturanhalaman.index') }}">
-                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Pengaturan Halaman</span>
+                            <span class="menu-title">Documention</span>
                         </a>
                     </li>
                 </ul>
@@ -129,12 +75,13 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    @include('dashboard.pesan')
                     <div class="row">
                         <div class="col-md-12 stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    @yield('konten')
+                                    <p class="card-title">Recent Purchases</p>
+                                    <div class="table-responsive">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -145,11 +92,11 @@
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
-                                href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com
-                            </a>2021</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
-                                href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a>
-                            templates</span>
+                                href="" target="_blank">Teknik Informatika UM Pontianak
+                            </a>2023</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">App & Web <a
+                                href="" target="_blank">Data Mahasiswa dan Jadwal Mengajar Dosen</a>
+                        </span>
                     </div>
                 </footer>
                 <!-- partial -->
