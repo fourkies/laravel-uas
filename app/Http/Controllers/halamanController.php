@@ -67,7 +67,8 @@ class halamanController extends Controller
      */
     public function edit(string $id)
     {
-        return view('dashboard.halaman.edit');
+        $data = halaman::where('id',$id)->first();
+        return view('dashboard.halaman.edit')->with('data', $data);
     }
 
     /**
