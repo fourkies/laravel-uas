@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin</title>
+    <title>Dashboard Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin') }}/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ asset('admin') }}/vendors/base/vendor.bundle.base.css">
@@ -26,9 +26,9 @@
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
                     <a class="navbar-brand brand-logo" href="index.html"><img
-                            src="{{ asset('admin') }}/images/logo/ump1.png" alt="logo" /></a>
+                            src="{{ asset('admin') }}/images/logo/logoump.png" alt="logo" /></a>
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img
-                            src="{{ asset('admin') }}/images/logo/ump1.png" alt="logo" /></a>
+                            src="{{ asset('admin') }}/images/logo/logoump.png" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button"
                         data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
