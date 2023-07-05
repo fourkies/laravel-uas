@@ -34,11 +34,11 @@ class halamanController extends Controller
         Session::flash('isi', $request->isi);
         $request->validate(
             [
-                'judul'=>'required',
+                'name'=>'required',
                 'isi' => 'required',
             ],
             [
-                'judul.required' => 'Judul wajib diisi',
+                'name.required' => 'Nama wajib diisi',
                 'isi.required' => 'Isian tulisan wajib diisi',
 
             ]
@@ -46,12 +46,12 @@ class halamanController extends Controller
         );
 
         $data = [
-            'judul'=>$request->judul,
+            'name'=>$request->name,
             'isi' =>$request->isi
         ];
         halaman::create($data);
 
-        return redirect()->route('halaman.index')->with('success', 'Berhasil menambahkan data');
+        return redirect()->route('halaman.index')->with('success', 'Anda berhasil menambahkan data');
     }
 
     /**
@@ -95,7 +95,7 @@ class halamanController extends Controller
         ];
         halaman::where('id', $id)->update($data);
 
-        return redirect()->route('halaman.index')->with('success', 'Berhasil update data');
+        return redirect()->route('halaman.index')->with('success', 'Anda Berhasil update data');
         
     }
 
@@ -104,6 +104,7 @@ class halamanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        halaman::where('id',$id)->delete();
+        return redirect()->route('halaman.index')->with('success', 'Anda telah berhasil delate data');
     }
 }
