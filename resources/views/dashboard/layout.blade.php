@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ asset('admin') }}/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('admin') }}/images/logo/ump1.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
 </head>
 
 <body>

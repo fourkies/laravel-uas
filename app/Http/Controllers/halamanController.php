@@ -13,7 +13,8 @@ class halamanController extends Controller
      */
     public function index()
     {
-        return view('dashboard.halaman.index');
+        $data = halaman::orderBy('judul','asc')->get();
+        return view('dashboard.halaman.index')->with('data', $data);
     }
 
     /**
@@ -66,7 +67,7 @@ class halamanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('dashboard.halaman.edit');
     }
 
     /**
