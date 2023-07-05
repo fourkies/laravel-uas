@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\halaman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class halamanController extends Controller
 {
@@ -28,6 +29,8 @@ class halamanController extends Controller
      */
     public function store(Request $request)
     {
+        Session::flash('judul', $request->judul);
+        Session::flash('isi', $request->isi);
         $request->validate(
             [
                 'judul'=>'required',
