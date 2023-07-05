@@ -16,7 +16,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('admin') }}/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('admin') }}/images/favicon.png" />
+    <link rel="shortcut icon" href="{{ asset('admin') }}/images/logo/ump1.png" />
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             id="profileDropdown">
-                            <img src="{{ asset('admin') }}/images/faces/face15.jpg{{ Auth::user()->avatar }}"
+                            <img src="{{ asset('admin') }}/images/faces/face28.jpg{{ Auth::user()->avatar }}"
                                 alt="profile" />
                             <span class="nav-profile-name">{{ Auth::user()->name }}</span>
                         </a>
