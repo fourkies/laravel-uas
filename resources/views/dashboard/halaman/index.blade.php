@@ -1,7 +1,7 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <p class="card-title">Mahasiswa</p>
+    <p class="card-title">Mahasiswa Teknik Informatika <a>©2020</a></p>
     <div class="pb"><a href="{{ route('halaman.create') }}" class="btn btn-primary">+ Tambah Data Mahasiswa</a>
     </div>
     <div class="table-responsive">

@@ -34,11 +34,11 @@ class halamanController extends Controller
         Session::flash('isi', $request->isi);
         $request->validate(
             [
-                'name'=>'required',
+                'judul'=>'required',
                 'isi' => 'required',
             ],
             [
-                'name.required' => 'Nama wajib diisi',
+                'judul.required' => 'nama wajib diisi',
                 'isi.required' => 'Isian tulisan wajib diisi',
 
             ]
@@ -46,7 +46,7 @@ class halamanController extends Controller
         );
 
         $data = [
-            'name'=>$request->name,
+            'judul'=>$request->judul,
             'isi' =>$request->isi
         ];
         halaman::create($data);
@@ -82,7 +82,7 @@ class halamanController extends Controller
                 'isi' => 'required',
             ],
             [
-                'judul.required' => 'Judul wajib diisi',
+                'judul.required' => 'nama wajib diisi',
                 'isi.required' => 'Isian tulisan wajib diisi',
 
             ]

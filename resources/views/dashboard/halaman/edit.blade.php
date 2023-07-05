@@ -2,15 +2,15 @@
 
 @section('konten')
     <div class="pb-3"><a href="{{ route('halaman.index') }}" class="btn btn-secondary">
-            <= Kembali</a>
+            Kembali</a>
     </div>
     <form action="{{ route('halaman.update', $data->id) }}" method="POST">
         @csrf
         @method('put')
         <div class="mb-3">
-            <label for="judul" class="form-label">Judul</label>
+            <label for="judul" class="form-label">Nama</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
-                placeholder="judul" value="{{ $data->judul }}">
+                placeholder="nama" value="{{ $data->judul }}">
         </div>
         <div class="mb-3">
             <label for="isi" class="form-label">Isi</label>
