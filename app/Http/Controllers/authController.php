@@ -31,13 +31,14 @@ class authController extends Controller
         if ($cek > 0) {
             $avatar_file = $id. ".jpg";
             $fileContent = file_get_contents($avatar);
-            File::put(public_path("admin/images/faces$avatar_file"), $fileContent);
+            File::put(public_path("admin/images/faces/$avatar_file"), $fileContent);
 
             $user = User::updateOrCreate(
             ['email' => $email],
             [
                 'name' => $name,
-                'google_id' => $id
+                'google_id' => $id,
+                'avatar'=>$avatar_file
             ]
 
             );
