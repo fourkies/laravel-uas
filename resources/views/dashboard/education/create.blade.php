@@ -9,7 +9,7 @@
         <div class="mb-3">
             <label for="judul" class="form-label">Universitas</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
-                placeholder="Nama Mahasiswa" value="{{ Session::get('judul') }}">
+                placeholder="Universitas" value="{{ Session::get('judul') }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Nama Fakultas</label>
@@ -35,11 +35,6 @@
                 <div class="col-auto"><input type="date" class="form-control form-control-sm" name="tgl_akhir"
                         placeholder="dd/mm//yy" value="{{ Session::get('tgl_akhir') }}"></div>
             </div>
-            <div class="mb-3">
-                <label for="isi" class="form-label">Isi</label>
-                <textarea class="form-control summernote" rows="5" name="isi">{{ Session::get('isi') }}</textarea>
-            </div>
             <button class="btn btn-primary" name="simpan" type="submit">SIMPAN</button>
-
     </form>
 @endsection

@@ -41,7 +41,6 @@ class educationController extends Controller
         Session::flash('info3', $request->info3);
         Session::flash('tgl_mulai', $request->tgl_mulai);
         Session::flash('tgl_akhir', $request->tgl_akhir);
-        Session::flash('isi', $request->isi);
 
         $request->validate(
             [
@@ -51,7 +50,6 @@ class educationController extends Controller
                 'info3' => 'required',
                 'tgl_mulai' => 'required',
                 'tgl_akhir' => 'required',
-                'isi' => 'required',
             ],
             [
                 'judul.required' => 'Nama wajib diisi',
@@ -59,7 +57,6 @@ class educationController extends Controller
                 'info2.required' => 'Prodi wajib diisi',
                 'info3.required' => 'Kelas wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai dan Akhir wajib diisi',
-                'isi.required' => 'Isian tulisan wajib diisi',
 
             ]
         
@@ -73,11 +70,10 @@ class educationController extends Controller
             'tipe'  => $this->_tipe,
             'tgl_mulai' => $request->tgl_mulai,
             'tgl_akhir' => $request->tgl_akhir,
-            'isi' => $request->isi
         ];
         riwayat::create($data);
 
-        return redirect()->route('education.index')->with('success', 'Anda berhasil menambahkan data Mahasiswa');
+        return redirect()->route('education.index')->with('success', 'Anda berhasil menambahkan data Education');
     }
 
     /**
@@ -109,15 +105,13 @@ class educationController extends Controller
                 'info2' => 'required',
                 'info3' => 'required',
                 'tgl_mulai' => 'required',
-                'isi' => 'required',
             ],
             [
                 'judul.required' => 'Posisi wajib diisi',
                 'info1.required' => 'Nim wajib diisi',
                 'info2.required' => 'Prodi wajib diisi',
-                'info3.required' => 'Kelas wajib diisi',
+                'info3.required' => 'IPK wajib diisi',
                 'tgl_mulai.required' => 'Tanggal mulai wajib diisi',
-                'isi.required' => 'Isian tulisan wajib diisi',
             ]
         );
 
@@ -132,7 +126,7 @@ class educationController extends Controller
             'isi' => $request->isi
         ];
         riwayat::where('id', $id)->where('tipe', $this->_tipe)->update($data);
-        return redirect()->route('experience.index')->with('success', 'Anda Berhasil update data Mahasiswa');
+        return redirect()->route('education.index')->with('success', 'Anda Berhasil update data Education');
     }
 
     /**
@@ -141,6 +135,6 @@ class educationController extends Controller
     public function destroy(string $id)
     {
         riwayat::where('id', $id)->where('tipe', $this->_tipe)->delete();
-        return redirect()->route('experience.index')->with('success', 'Anda Berhasil delete data Mahasiswa');
+        return redirect()->route('education.index')->with('success', 'Anda Berhasil delete data Education');
     }
 }

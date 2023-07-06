@@ -20,12 +20,12 @@
         <div class="mb-3">
             <label for="info2" class="form-label">Nama Prodi</label>
             <input type="text" class="form-control form-control-sm" name="info2" id="info2"
-                aria-describedby="helpId" placeholder="Nama Prodi" value="{{ Session::get('info2') }}">
+                aria-describedby="helpId" placeholder="Nama Prodi" value="{{ $data->info2 }}">
         </div>
         <div class="mb-3">
             <label for="info3" class="form-label">Kelas</label>
             <input type="text" class="form-control form-control-sm" name="info3" id="info3"
-                aria-describedby="helpId" placeholder="Kelas" value="{{ Session::get('info3') }}">
+                aria-describedby="helpId" placeholder="Kelas" value="{{ $data->info3 }}">
         </div>
         <div class="mb-3">
             <div class="row">
