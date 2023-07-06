@@ -25,7 +25,7 @@
                                 action="{{ route('halaman.destroy', $item->id) }}" class="d-inline" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-sm btn-danger" type="submit" name='submit'>Delate</button>
+                                <button class="btn btn-sm btn-danger" type="submit" name='submit'>Delete</button>
                             </form>
 
                         </td>
