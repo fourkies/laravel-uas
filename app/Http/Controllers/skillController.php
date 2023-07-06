@@ -9,6 +9,8 @@ class skillController extends Controller
 {
     public function index() 
     {
+        $skill_url = public_path('admin/devicon.json');
+        $skill_data = file_get_contents($skill_url);
         return view('dashboard.skill.index');
     }
     public function update(Request $request) 
