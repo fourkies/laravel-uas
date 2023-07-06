@@ -8,7 +8,7 @@
         @csrf
         @method('put')
         <div class="mb-3">
-            <label for="judul" class="form-label">Nama</label>
+            <label for="judul" class="form-label">Judul</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
                 placeholder="nama" value="{{ $data->judul }}">
         </div>
