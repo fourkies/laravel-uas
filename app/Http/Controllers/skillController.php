@@ -12,6 +12,6 @@ class skillController extends Controller
     }
     public function update() 
     {
-
+        return 'MANTAP';
     }
 }

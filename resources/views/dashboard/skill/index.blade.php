@@ -1,7 +1,7 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <form action="{{ route('skill.store') }}" method="POST">
+    <form action="{{ route('skill.update') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="judul" class="form-label">PROGRAMMING LANGUAGES & TOOLS</label>

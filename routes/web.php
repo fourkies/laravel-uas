@@ -38,6 +38,7 @@ Route::prefix('dashboard')->middleware('auth')->group(
         Route::resource('halaman', halamanController::class);
         Route::resource('experience', experienceController::class);
         Route::resource('education', educationController::class);
-        Route::get('skill', [skillController::class,"index"]);
+        Route::get('skill', [skillController::class,"index"])->name('skill.index');
+        Route::post('skill', [skillController::class,"update"])->name('skill.update');
     }
 );
