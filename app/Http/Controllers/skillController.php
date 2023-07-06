@@ -10,8 +10,16 @@ class skillController extends Controller
     {
         return view('dashboard.skill.index');
     }
-    public function update() 
+    public function update(Request $request) 
     {
-        return 'MANTAP';
+        if($request->method() == 'POST') {
+           $request->validate([
+                '_language' => 'required',
+                '_workflow' => 'required',
+           ],[
+                '_language.required' => 'Silahkan masukkan bahasa Pemrograman yang anda kuasai',
+                '_workflow.required' => 'Silahkan masukkan workflow yang anda kuasai',
+           ]);
+        }
     }
 }
