@@ -1,6 +1,7 @@
 @extends('dashboard.layout')
 
 @section('konten')
+    {{ $skill }}
     <form action="{{ route('skill.update') }}" method="POST">
         @csrf
         <div class="mb-3">
