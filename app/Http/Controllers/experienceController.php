@@ -85,7 +85,8 @@ class experienceController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = riwayat::where('id', $id)->where('tipe',$this->_tipe)->first();
+        return view('dashboard.experience.edit')->with('data', $data);
     }
 
     /**
@@ -93,7 +94,32 @@ class experienceController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'judul' => 'required',
+                'info1' => 'required',
+                'tgl_mulai' => 'required',
+                'isi' => 'required',
+            ],
+            [
+                'judul.required' => 'Posisi wajib diisi',
+                'info1.required' => 'Nama Prodi wajib diisi',
+                'tgl_mulai.required' => 'Tanggal mulai wajib diisi',
+                'isi.required' => 'Isian tulisan wajib diisi',
+            ]
+        );
+
+        $data = [
+            'judul' => $request->judul,
+            'info1' => $request->info1,
+            'tipe' => $this->_tipe,
+            'tgl_mulai' => $request->tgl_mulai,
+            'tgl_akhir' => $request->tgl_akhir,
+            'isi' => $request->isi
+        ];
+        riwayat::where('id', $id)->where('tipe', $this->_tipe)->update($data);
+
+        return redirect()->route('experience.index')->with('success', 'Anda Berhasil update data experience');
     }
 
     /**
@@ -101,6 +127,7 @@ class experienceController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        riwayat::where('id', $id)->where('tipe', $this->_tipe)->delete();
+        return redirect()->route('experience.index')->with('success', 'Anda Berhasil delete data experience');
     }
 }
