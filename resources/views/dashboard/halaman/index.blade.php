@@ -2,7 +2,7 @@
 
 @section('konten')
     <p class="card-title">Halaman</p>
-    <div class="pb"><a href="{{ route('halaman.create') }}" class="btn btn-primary">+ Tambah Halaman</a>
+    <div class="pb"><a href="{{ route('halaman.create') }}" class="btn btn-primary">Tambah Halaman</a>
     </div>
     <div class="table-responsive">
         <table class="table table-stripped">

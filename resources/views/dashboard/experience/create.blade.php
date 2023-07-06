@@ -7,9 +7,9 @@
     <form action="{{ route('experience.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="judul" class="form-label">Posisi</label>
+            <label for="judul" class="form-label">Nama Mahasiswa</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
-                placeholder="Posisi" value="{{ Session::get('judul') }}">
+                placeholder="Nama Mahasiswa" value="{{ Session::get('judul') }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Nama Prodi</label>

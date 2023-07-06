@@ -1,15 +1,15 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <p class="card-title">Experience</p>
-    <div class="pb"><a href="{{ route('experience.create') }}" class="btn btn-primary">+ Tambah Experience</a>
+    <p class="card-title">Mahasiswa</p>
+    <div class="pb"><a href="{{ route('experience.create') }}" class="btn btn-primary">Tambah Data Mahasiswa</a>
     </div>
     <div class="table-responsive">
         <table class="table table-stripped">
             <thead>
                 <tr>
                     <th class="col-1">No</th>
-                    <th>Posisi</th>
+                    <th>Nama</th>
                     <th>Prodi</th>
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Akhir</th>

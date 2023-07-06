@@ -69,7 +69,7 @@ class experienceController extends Controller
         ];
         riwayat::create($data);
 
-        return redirect()->route('experience.index')->with('success', 'Anda berhasil menambahkan data experience');
+        return redirect()->route('experience.index')->with('success', 'Anda berhasil menambahkan data Mahasiswa');
     }
 
     /**
@@ -119,7 +119,7 @@ class experienceController extends Controller
         ];
         riwayat::where('id', $id)->where('tipe', $this->_tipe)->update($data);
 
-        return redirect()->route('experience.index')->with('success', 'Anda Berhasil update data experience');
+        return redirect()->route('experience.index')->with('success', 'Anda Berhasil update data Mahasiswa');
     }
 
     /**
@@ -128,6 +128,6 @@ class experienceController extends Controller
     public function destroy(string $id)
     {
         riwayat::where('id', $id)->where('tipe', $this->_tipe)->delete();
-        return redirect()->route('experience.index')->with('success', 'Anda Berhasil delete data experience');
+        return redirect()->route('experience.index')->with('success', 'Anda Berhasil delete data Mahasiswa');
     }
 }
