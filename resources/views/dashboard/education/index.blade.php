@@ -1,8 +1,8 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <p class="card-title">Mahasiswa</p>
-    <div class="pb"><a href="{{ route('experience.create') }}" class="btn btn-primary">Tambah Data Mahasiswa</a>
+    <p class="card-title">Education</p>
+    <div class="pb"><a href="{{ route('education.create') }}" class="btn btn-primary">Tambah Education</a>
     </div>
     <div class="table-responsive">
         <table class="table table-stripped">

@@ -6,11 +6,11 @@ use App\Models\riwayat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class experienceController extends Controller
+class educationController extends Controller
 {   
     function __construct()
     {
-        $this->_tipe = 'experience';
+        $this->_tipe = 'education';
     }
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class experienceController extends Controller
     public function index()
     {
         $data = riwayat::where('tipe', $this->_tipe)->orderBy('tgl_akhir', 'desc')->get();
-        return view('dashboard.experience.index')->with('data', $data);
+        return view('dashboard.education.index')->with('data', $data);
     }
 
     /**
@@ -26,7 +26,7 @@ class experienceController extends Controller
      */
     public function create()
     {
-        return view('dashboard.experience.create');
+        return view('dashboard.education.create');
         
     }
 
@@ -77,7 +77,7 @@ class experienceController extends Controller
         ];
         riwayat::create($data);
 
-        return redirect()->route('experience.index')->with('success', 'Anda berhasil menambahkan data Mahasiswa');
+        return redirect()->route('education.index')->with('success', 'Anda berhasil menambahkan data Mahasiswa');
     }
 
     /**
@@ -94,7 +94,7 @@ class experienceController extends Controller
     public function edit(string $id)
     {
         $data = riwayat::where('id', $id)->where('tipe',$this->_tipe)->first();
-        return view('dashboard.experience.edit')->with('data', $data);
+        return view('dashboard.education.edit')->with('data', $data);
     }
 
     /**
@@ -132,7 +132,6 @@ class experienceController extends Controller
             'isi' => $request->isi
         ];
         riwayat::where('id', $id)->where('tipe', $this->_tipe)->update($data);
-
         return redirect()->route('experience.index')->with('success', 'Anda Berhasil update data Mahasiswa');
     }
 

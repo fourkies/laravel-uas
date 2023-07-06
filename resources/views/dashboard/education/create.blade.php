@@ -1,20 +1,20 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <div class="pb-3"><a href="{{ route('experience.index') }}" class="btn btn-secondary">
+    <div class="pb-3"><a href="{{ route('education.index') }}" class="btn btn-secondary">
             Kembali</a>
     </div>
-    <form action="{{ route('experience.store') }}" method="POST">
+    <form action="{{ route('education.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="judul" class="form-label">Nama Mahasiswa</label>
+            <label for="judul" class="form-label">Universitas</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
                 placeholder="Nama Mahasiswa" value="{{ Session::get('judul') }}">
         </div>
         <div class="mb-3">
-            <label for="info1" class="form-label">Nim</label>
+            <label for="info1" class="form-label">Nama Fakultas</label>
             <input type="text" class="form-control form-control-sm" name="info1" id="info1"
-                aria-describedby="helpId" placeholder="Nim" value="{{ Session::get('info1') }}">
+                aria-describedby="helpId" placeholder="Nama Fakultas" value="{{ Session::get('info1') }}">
         </div>
         <div class="mb-3">
             <label for="info2" class="form-label">Nama Prodi</label>
@@ -22,9 +22,9 @@
                 aria-describedby="helpId" placeholder="Nama Prodi" value="{{ Session::get('info2') }}">
         </div>
         <div class="mb-3">
-            <label for="info3" class="form-label">Kelas</label>
+            <label for="info3" class="form-label">IPK</label>
             <input type="text" class="form-control form-control-sm" name="info3" id="info3"
-                aria-describedby="helpId" placeholder="Kelas" value="{{ Session::get('info3') }}">
+                aria-describedby="helpId" placeholder="IPK" value="{{ Session::get('info3') }}">
         </div>
         <div class="mb-3">
             <div class="row">
