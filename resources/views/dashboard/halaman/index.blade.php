@@ -1,15 +1,15 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <p class="card-title">Mahasiswa Teknik Informatika <a>©2020</a></p>
-    <div class="pb"><a href="{{ route('halaman.create') }}" class="btn btn-primary">+ Tambah Data Mahasiswa</a>
+    <p class="card-title">Halaman</p>
+    <div class="pb"><a href="{{ route('halaman.create') }}" class="btn btn-primary">+ Tambah Halaman</a>
     </div>
     <div class="table-responsive">
         <table class="table table-stripped">
             <thead>
                 <tr>
                     <th class="col-1">No</th>
-                    <th>Nama</th>
+                    <th>Judul</th>
                     <th class="col-2">Action</th>
                 </tr>
             </thead>

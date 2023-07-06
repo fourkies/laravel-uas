@@ -51,7 +51,7 @@ class halamanController extends Controller
         ];
         halaman::create($data);
 
-        return redirect()->route('halaman.index')->with('success', 'Anda berhasil menambahkan data');
+        return redirect()->route('halaman.index')->with('success', 'Anda Berhasil menambahkan data');
     }
 
     /**
@@ -105,6 +105,6 @@ class halamanController extends Controller
     public function destroy(string $id)
     {
         halaman::where('id',$id)->delete();
-        return redirect()->route('halaman.index')->with('success', 'Anda telah berhasil delate data');
+        return redirect()->route('halaman.index')->with('success', 'Anda Berhasil delate data');
     }
 }

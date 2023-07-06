@@ -7,9 +7,9 @@
     <form action="{{ route('halaman.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="judul" class="form-label">Nama</label>
+            <label for="judul" class="form-label">Judul</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
-                placeholder="nama" value="{{ Session::get('name') }}">
+                placeholder="judul" value="{{ Session::get('judul') }}">
         </div>
         <div class="mb-3">
             <label for="isi" class="form-label">Isi</label>
