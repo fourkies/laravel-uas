@@ -29,7 +29,7 @@ class experienceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
