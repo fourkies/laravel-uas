@@ -11,7 +11,8 @@ class experienceController extends Controller
      */
     public function index()
     {
-        return view('dashboard.experience.index');
+        $data = [];
+        return view('dashboard.experience.index')->with('data', $data);
     }
 
     /**
